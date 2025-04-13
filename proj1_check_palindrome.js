@@ -11,7 +11,7 @@ function palindrome(str) {
     // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
     cleanedString = newStr.replace(/[\W_]/gi, '').toLowerCase()
     
-    // Step 2. Convert string to array using spread operator, reverse the character order and rejoin to form string
+    // Step 2. Convert string to array using spread operator, reverse the character order and rejoin to form 'new' string
     strToArray = [...cleanedString]
     
     c = 0
@@ -26,7 +26,7 @@ function palindrome(str) {
         rejoinedStr += reversedArray[j]
     }
 
-    // Step 3. Check if cleanedString is strictly equal to reversedString and return a Boolean
+    // Step 3. Check if cleanedString is strictly equal to rejoinedString and return a Boolean
     return cleanedString === rejoinedStr
 
 }
