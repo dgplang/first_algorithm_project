@@ -12,15 +12,19 @@ function palindrome(str) {
     cleanedString = newStr.replace(/[\W_]/gi, '').toLowerCase()
     
     // Step 2. Convert string to array using spread operator, reverse the character order and rejoin to form 'new' string
+
+    // String conversion to array using the spread operator (...)
     strToArray = [...cleanedString]
-    
+
+    // Reversing order of character stored in strToArray using for-loop and counter 'c' 
     c = 0
     reversedArray = []
     for (i = strToArray.length - 1; i >= 0; i--) {
         reversedArray[i] = strToArray[c]
         ++c
     }
-    
+
+    // Rejoining of earlier reversed characters to form a 'new' string
     rejoinedStr = ''
     for (j = 0; j < reversedArray.length; j++) {
         rejoinedStr += reversedArray[j]
