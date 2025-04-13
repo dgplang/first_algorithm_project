@@ -9,13 +9,25 @@ function palindrome(str) {
     let cleanedString = ""
 
     // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
-    cleanedString = str.replace(/[\W_]/gi, '').toLowerCase()
-
-    // Step 2. Use the following methods: split, reverse and join on the string
-    reversedString = cleanedString.split('').reverse().join('')
+    cleanedString = newStr.replace(/[\W_]/gi, '').toLowerCase()
+    
+    // Step 2. Convert string to array using spread operator, reverse the character order and rejoin to form string
+    strToArray = [...cleanedString]
+    
+    c = 0
+    reversedArray = []
+    for (i = strToArray.length - 1; i >= 0; i--) {
+        reversedArray[i] = strToArray[c]
+        ++c
+    }
+    
+    rejoinedStr = ''
+    for (j = 0; j < reversedArray.length; j++) {
+        rejoinedStr += reversedArray[j]
+    }
 
     // Step 3. Check if cleanedString is strictly equal to reversedString and return a Boolean
-    return cleanedString === reversedString
+    return cleanedString === rejoinedStr
 
 }
 
