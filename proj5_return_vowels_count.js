@@ -3,13 +3,15 @@
 function vowelsCount(wordToProcess) {
 
     transformedWord = wordToProcess.toLowerCase()
-    wordArr = transformedWord.split("")
+
+    // String conversion to array using the spread operator (...)
+    wordArr = [...transformedWord]
     vowelsArr = []
     let counter = 0
 
     for (i = 0; i < wordArr.length; i++) {
         if (wordArr[i] === "a" || wordArr[i] === "e" || wordArr[i] === "i" || wordArr[i] === "o" || wordArr[i] === "u") {
-            vowelsArr.push(wordArr[i])
+            vowelsArr[counter] = wordArr[i]
             counter++
         }
     }
