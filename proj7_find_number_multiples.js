@@ -1,6 +1,5 @@
 function numMultiples(num) {
     let multiples = []
-    let output = ""
     for (i = num - 1; i >= 1; i--) {
         if (num % i == 0) {
             multiples.push(i)
@@ -18,4 +17,4 @@ function numMultiples(num) {
     }
 }
 
-numMultiples(45)
+numMultiples(773)
